@@ -1,0 +1,572 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5E6A3B431D2616D600971ACE /* BOMainTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E6A3B421D2616D600971ACE /* BOMainTableViewController.m */; };
+		5EA247381D26CF9600F5BE13 /* BOLoginTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EA247371D26CF9600F5BE13 /* BOLoginTableViewController.m */; };
+		5EA2473C1D26D04B00F5BE13 /* BOMainTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5EA247391D26D04B00F5BE13 /* BOMainTableViewCell.xib */; };
+		5EA2473D1D26D04B00F5BE13 /* BOMainTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EA2473A1D26D04B00F5BE13 /* BOMainTableViewCell.m */; };
+		5EA247431D26DB5000F5BE13 /* BOFindMyPasswordTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EA247421D26DB5000F5BE13 /* BOFindMyPasswordTableViewController.m */; };
+		5EA247471D26ECC400F5BE13 /* BOBambooDetailTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EA247461D26ECC400F5BE13 /* BOBambooDetailTableViewController.m */; };
+		5EA247491D27FB8000F5BE13 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5EA247481D27FB8000F5BE13 /* GoogleService-Info.plist */; };
+		5EA2474C1D27FE2400F5BE13 /* BOPrivacyStatementViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EA2474B1D27FE2400F5BE13 /* BOPrivacyStatementViewController.m */; };
+		5EA2474F1D2802E900F5BE13 /* BOSignUpTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EA2474E1D2802E900F5BE13 /* BOSignUpTableViewController.m */; };
+		5EA247521D280AC700F5BE13 /* BOUserProfileTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EA247511D280AC700F5BE13 /* BOUserProfileTableViewController.m */; };
+		5EA247551D28188600F5BE13 /* BOModifyDisplayNameTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EA247541D28188600F5BE13 /* BOModifyDisplayNameTableViewController.m */; };
+		5EA247581D2829FF00F5BE13 /* BOUpdatePasswordTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EA247571D2829FF00F5BE13 /* BOUpdatePasswordTableViewController.m */; };
+		5EA2475B1D28FBFB00F5BE13 /* BOPublishBambooTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EA2475A1D28FBFB00F5BE13 /* BOPublishBambooTableViewController.m */; };
+		5EA2475E1D290BBE00F5BE13 /* BOScanResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EA2475D1D290BBE00F5BE13 /* BOScanResultViewController.m */; };
+		5EA247621D2954D400F5BE13 /* BookISBNResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EA247611D2954D400F5BE13 /* BookISBNResultViewController.m */; };
+		5EB20B3F1D3C8BAF00E61BB3 /* BOAboutUsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EB20B3E1D3C8BAF00E61BB3 /* BOAboutUsViewController.m */; };
+		5EBB4AB81D22CD450019A3B6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EBB4AB71D22CD450019A3B6 /* main.m */; };
+		5EBB4ABB1D22CD450019A3B6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EBB4ABA1D22CD450019A3B6 /* AppDelegate.m */; };
+		5EBB4AC11D22CD450019A3B6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5EBB4ABF1D22CD450019A3B6 /* Main.storyboard */; };
+		5EBB4AC31D22CD450019A3B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5EBB4AC21D22CD450019A3B6 /* Assets.xcassets */; };
+		5EBB4AC61D22CD450019A3B6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5EBB4AC41D22CD450019A3B6 /* LaunchScreen.storyboard */; };
+		5EEE58891D2CF57D0098E925 /* BOUserTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EEE58881D2CF57D0098E925 /* BOUserTableViewController.m */; };
+		5EEE588C1D2D26950098E925 /* BOBookInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EEE588B1D2D26950098E925 /* BOBookInfoViewController.m */; };
+		5EEE58901D2D31A50098E925 /* BOMainAdTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EEE588E1D2D31A50098E925 /* BOMainAdTableViewCell.m */; };
+		5EEE58911D2D31A50098E925 /* BOMainAdTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5EEE588F1D2D31A50098E925 /* BOMainAdTableViewCell.xib */; };
+		5EEE58941D2E05D80098E925 /* BOMyBambooTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EEE58931D2E05D80098E925 /* BOMyBambooTableViewController.m */; };
+		5EEE58971D2E0C2C0098E925 /* BOBookListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EEE58961D2E0C2C0098E925 /* BOBookListTableViewController.m */; };
+		5EFBAC071D38E92100F96108 /* BOSelectBookTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EFBAC061D38E92100F96108 /* BOSelectBookTableViewController.m */; };
+		C4DFA34EDA5A9B3601A720DA /* Pods_Bamboo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD3705007E75050C2742F697 /* Pods_Bamboo.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		4C90FB75EEE10202ED69596E /* Pods-Bamboo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bamboo.release.xcconfig"; path = "Pods/Target Support Files/Pods-Bamboo/Pods-Bamboo.release.xcconfig"; sourceTree = "<group>"; };
+		5E6A3B411D2616D600971ACE /* BOMainTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BOMainTableViewController.h; path = Main/BOMainTableViewController.h; sourceTree = "<group>"; };
+		5E6A3B421D2616D600971ACE /* BOMainTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BOMainTableViewController.m; path = Main/BOMainTableViewController.m; sourceTree = "<group>"; };
+		5EA247361D26CF9600F5BE13 /* BOLoginTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BOLoginTableViewController.h; path = User/BOLoginTableViewController.h; sourceTree = "<group>"; };
+		5EA247371D26CF9600F5BE13 /* BOLoginTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BOLoginTableViewController.m; path = User/BOLoginTableViewController.m; sourceTree = "<group>"; };
+		5EA247391D26D04B00F5BE13 /* BOMainTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BOMainTableViewCell.xib; sourceTree = "<group>"; };
+		5EA2473A1D26D04B00F5BE13 /* BOMainTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BOMainTableViewCell.m; sourceTree = "<group>"; };
+		5EA2473B1D26D04B00F5BE13 /* BOMainTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BOMainTableViewCell.h; sourceTree = "<group>"; };
+		5EA247411D26DB5000F5BE13 /* BOFindMyPasswordTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BOFindMyPasswordTableViewController.h; path = User/BOFindMyPasswordTableViewController.h; sourceTree = "<group>"; };
+		5EA247421D26DB5000F5BE13 /* BOFindMyPasswordTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BOFindMyPasswordTableViewController.m; path = User/BOFindMyPasswordTableViewController.m; sourceTree = "<group>"; };
+		5EA247451D26ECC400F5BE13 /* BOBambooDetailTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BOBambooDetailTableViewController.h; path = Bamboo/BOBambooDetailTableViewController.h; sourceTree = "<group>"; };
+		5EA247461D26ECC400F5BE13 /* BOBambooDetailTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BOBambooDetailTableViewController.m; path = Bamboo/BOBambooDetailTableViewController.m; sourceTree = "<group>"; };
+		5EA247481D27FB8000F5BE13 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		5EA2474A1D27FE2400F5BE13 /* BOPrivacyStatementViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BOPrivacyStatementViewController.h; path = User/BOPrivacyStatementViewController.h; sourceTree = "<group>"; };
+		5EA2474B1D27FE2400F5BE13 /* BOPrivacyStatementViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BOPrivacyStatementViewController.m; path = User/BOPrivacyStatementViewController.m; sourceTree = "<group>"; };
+		5EA2474D1D2802E900F5BE13 /* BOSignUpTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BOSignUpTableViewController.h; path = User/BOSignUpTableViewController.h; sourceTree = "<group>"; };
+		5EA2474E1D2802E900F5BE13 /* BOSignUpTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BOSignUpTableViewController.m; path = User/BOSignUpTableViewController.m; sourceTree = "<group>"; };
+		5EA247501D280AC700F5BE13 /* BOUserProfileTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BOUserProfileTableViewController.h; path = User/BOUserProfileTableViewController.h; sourceTree = "<group>"; };
+		5EA247511D280AC700F5BE13 /* BOUserProfileTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BOUserProfileTableViewController.m; path = User/BOUserProfileTableViewController.m; sourceTree = "<group>"; };
+		5EA247531D28188600F5BE13 /* BOModifyDisplayNameTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BOModifyDisplayNameTableViewController.h; path = User/BOModifyDisplayNameTableViewController.h; sourceTree = "<group>"; };
+		5EA247541D28188600F5BE13 /* BOModifyDisplayNameTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BOModifyDisplayNameTableViewController.m; path = User/BOModifyDisplayNameTableViewController.m; sourceTree = "<group>"; };
+		5EA247561D2829FF00F5BE13 /* BOUpdatePasswordTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BOUpdatePasswordTableViewController.h; path = User/BOUpdatePasswordTableViewController.h; sourceTree = "<group>"; };
+		5EA247571D2829FF00F5BE13 /* BOUpdatePasswordTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BOUpdatePasswordTableViewController.m; path = User/BOUpdatePasswordTableViewController.m; sourceTree = "<group>"; };
+		5EA247591D28FBFB00F5BE13 /* BOPublishBambooTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BOPublishBambooTableViewController.h; path = Bamboo/BOPublishBambooTableViewController.h; sourceTree = "<group>"; };
+		5EA2475A1D28FBFB00F5BE13 /* BOPublishBambooTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BOPublishBambooTableViewController.m; path = Bamboo/BOPublishBambooTableViewController.m; sourceTree = "<group>"; };
+		5EA2475C1D290BBE00F5BE13 /* BOScanResultViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BOScanResultViewController.h; path = Bamboo/BOScanResultViewController.h; sourceTree = "<group>"; };
+		5EA2475D1D290BBE00F5BE13 /* BOScanResultViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BOScanResultViewController.m; path = Bamboo/BOScanResultViewController.m; sourceTree = "<group>"; };
+		5EA247601D2954D400F5BE13 /* BookISBNResultViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BookISBNResultViewController.h; path = BookISBNSearch/BookISBNResultViewController.h; sourceTree = "<group>"; };
+		5EA247611D2954D400F5BE13 /* BookISBNResultViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BookISBNResultViewController.m; path = BookISBNSearch/BookISBNResultViewController.m; sourceTree = "<group>"; };
+		5EB20B3D1D3C8BAF00E61BB3 /* BOAboutUsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BOAboutUsViewController.h; path = User/BOAboutUsViewController.h; sourceTree = "<group>"; };
+		5EB20B3E1D3C8BAF00E61BB3 /* BOAboutUsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BOAboutUsViewController.m; path = User/BOAboutUsViewController.m; sourceTree = "<group>"; };
+		5EBB4AB31D22CD450019A3B6 /* Bamboo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bamboo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5EBB4AB71D22CD450019A3B6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		5EBB4AB91D22CD450019A3B6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		5EBB4ABA1D22CD450019A3B6 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		5EBB4AC01D22CD450019A3B6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5EBB4AC21D22CD450019A3B6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5EBB4AC51D22CD450019A3B6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		5EBB4AC71D22CD450019A3B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5EEE58871D2CF57D0098E925 /* BOUserTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BOUserTableViewController.h; path = User/BOUserTableViewController.h; sourceTree = "<group>"; };
+		5EEE58881D2CF57D0098E925 /* BOUserTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BOUserTableViewController.m; path = User/BOUserTableViewController.m; sourceTree = "<group>"; };
+		5EEE588A1D2D26950098E925 /* BOBookInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BOBookInfoViewController.h; path = Bamboo/BOBookInfoViewController.h; sourceTree = "<group>"; };
+		5EEE588B1D2D26950098E925 /* BOBookInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BOBookInfoViewController.m; path = Bamboo/BOBookInfoViewController.m; sourceTree = "<group>"; };
+		5EEE588D1D2D31A50098E925 /* BOMainAdTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BOMainAdTableViewCell.h; path = Cell/BOMainAdTableViewCell.h; sourceTree = "<group>"; };
+		5EEE588E1D2D31A50098E925 /* BOMainAdTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BOMainAdTableViewCell.m; path = Cell/BOMainAdTableViewCell.m; sourceTree = "<group>"; };
+		5EEE588F1D2D31A50098E925 /* BOMainAdTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = BOMainAdTableViewCell.xib; path = Cell/BOMainAdTableViewCell.xib; sourceTree = "<group>"; };
+		5EEE58921D2E05D80098E925 /* BOMyBambooTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BOMyBambooTableViewController.h; path = User/BOMyBambooTableViewController.h; sourceTree = "<group>"; };
+		5EEE58931D2E05D80098E925 /* BOMyBambooTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BOMyBambooTableViewController.m; path = User/BOMyBambooTableViewController.m; sourceTree = "<group>"; };
+		5EEE58951D2E0C2C0098E925 /* BOBookListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BOBookListTableViewController.h; path = User/BOBookListTableViewController.h; sourceTree = "<group>"; };
+		5EEE58961D2E0C2C0098E925 /* BOBookListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BOBookListTableViewController.m; path = User/BOBookListTableViewController.m; sourceTree = "<group>"; };
+		5EFBAC051D38E92100F96108 /* BOSelectBookTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BOSelectBookTableViewController.h; path = Bamboo/BOSelectBookTableViewController.h; sourceTree = "<group>"; };
+		5EFBAC061D38E92100F96108 /* BOSelectBookTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BOSelectBookTableViewController.m; path = Bamboo/BOSelectBookTableViewController.m; sourceTree = "<group>"; };
+		93EF530832E216081726A041 /* Pods-Bamboo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bamboo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Bamboo/Pods-Bamboo.debug.xcconfig"; sourceTree = "<group>"; };
+		BD3705007E75050C2742F697 /* Pods_Bamboo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bamboo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5EBB4AB01D22CD450019A3B6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C4DFA34EDA5A9B3601A720DA /* Pods_Bamboo.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2146829BD5A947098D90BF14 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BD3705007E75050C2742F697 /* Pods_Bamboo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		33D5371894DA5AA5D42C77CA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				93EF530832E216081726A041 /* Pods-Bamboo.debug.xcconfig */,
+				4C90FB75EEE10202ED69596E /* Pods-Bamboo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		5E6A3B401D2616B000971ACE /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				5E6A3B411D2616D600971ACE /* BOMainTableViewController.h */,
+				5E6A3B421D2616D600971ACE /* BOMainTableViewController.m */,
+			);
+			name = Main;
+			sourceTree = "<group>";
+		};
+		5EA247351D26CF6500F5BE13 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				5EA247361D26CF9600F5BE13 /* BOLoginTableViewController.h */,
+				5EA247371D26CF9600F5BE13 /* BOLoginTableViewController.m */,
+				5EA247411D26DB5000F5BE13 /* BOFindMyPasswordTableViewController.h */,
+				5EA247421D26DB5000F5BE13 /* BOFindMyPasswordTableViewController.m */,
+				5EA2474A1D27FE2400F5BE13 /* BOPrivacyStatementViewController.h */,
+				5EA2474B1D27FE2400F5BE13 /* BOPrivacyStatementViewController.m */,
+				5EA2474D1D2802E900F5BE13 /* BOSignUpTableViewController.h */,
+				5EA2474E1D2802E900F5BE13 /* BOSignUpTableViewController.m */,
+				5EA247501D280AC700F5BE13 /* BOUserProfileTableViewController.h */,
+				5EA247511D280AC700F5BE13 /* BOUserProfileTableViewController.m */,
+				5EA247531D28188600F5BE13 /* BOModifyDisplayNameTableViewController.h */,
+				5EA247541D28188600F5BE13 /* BOModifyDisplayNameTableViewController.m */,
+				5EA247561D2829FF00F5BE13 /* BOUpdatePasswordTableViewController.h */,
+				5EA247571D2829FF00F5BE13 /* BOUpdatePasswordTableViewController.m */,
+				5EEE58871D2CF57D0098E925 /* BOUserTableViewController.h */,
+				5EEE58881D2CF57D0098E925 /* BOUserTableViewController.m */,
+				5EEE58921D2E05D80098E925 /* BOMyBambooTableViewController.h */,
+				5EEE58931D2E05D80098E925 /* BOMyBambooTableViewController.m */,
+				5EEE58951D2E0C2C0098E925 /* BOBookListTableViewController.h */,
+				5EEE58961D2E0C2C0098E925 /* BOBookListTableViewController.m */,
+				5EB20B3D1D3C8BAF00E61BB3 /* BOAboutUsViewController.h */,
+				5EB20B3E1D3C8BAF00E61BB3 /* BOAboutUsViewController.m */,
+			);
+			name = User;
+			sourceTree = "<group>";
+		};
+		5EA247441D26ECA100F5BE13 /* Bamboo */ = {
+			isa = PBXGroup;
+			children = (
+				5EA247451D26ECC400F5BE13 /* BOBambooDetailTableViewController.h */,
+				5EA247461D26ECC400F5BE13 /* BOBambooDetailTableViewController.m */,
+				5EA247591D28FBFB00F5BE13 /* BOPublishBambooTableViewController.h */,
+				5EA2475A1D28FBFB00F5BE13 /* BOPublishBambooTableViewController.m */,
+				5EA2475C1D290BBE00F5BE13 /* BOScanResultViewController.h */,
+				5EA2475D1D290BBE00F5BE13 /* BOScanResultViewController.m */,
+				5EEE588A1D2D26950098E925 /* BOBookInfoViewController.h */,
+				5EEE588B1D2D26950098E925 /* BOBookInfoViewController.m */,
+				5EFBAC051D38E92100F96108 /* BOSelectBookTableViewController.h */,
+				5EFBAC061D38E92100F96108 /* BOSelectBookTableViewController.m */,
+			);
+			name = Bamboo;
+			sourceTree = "<group>";
+		};
+		5EA2475F1D29544C00F5BE13 /* BookISBNSearch */ = {
+			isa = PBXGroup;
+			children = (
+				5EA247601D2954D400F5BE13 /* BookISBNResultViewController.h */,
+				5EA247611D2954D400F5BE13 /* BookISBNResultViewController.m */,
+			);
+			name = BookISBNSearch;
+			sourceTree = "<group>";
+		};
+		5EBB4AAA1D22CD450019A3B6 = {
+			isa = PBXGroup;
+			children = (
+				5EBB4AB51D22CD450019A3B6 /* Bamboo */,
+				5EBB4AB41D22CD450019A3B6 /* Products */,
+				33D5371894DA5AA5D42C77CA /* Pods */,
+				2146829BD5A947098D90BF14 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		5EBB4AB41D22CD450019A3B6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5EBB4AB31D22CD450019A3B6 /* Bamboo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5EBB4AB51D22CD450019A3B6 /* Bamboo */ = {
+			isa = PBXGroup;
+			children = (
+				5EA2475F1D29544C00F5BE13 /* BookISBNSearch */,
+				5EA247441D26ECA100F5BE13 /* Bamboo */,
+				5EA247351D26CF6500F5BE13 /* User */,
+				5ED2B1901D266735000A8CD1 /* Cell */,
+				5E6A3B401D2616B000971ACE /* Main */,
+				5EBB4AB91D22CD450019A3B6 /* AppDelegate.h */,
+				5EBB4ABA1D22CD450019A3B6 /* AppDelegate.m */,
+				5EBB4ABF1D22CD450019A3B6 /* Main.storyboard */,
+				5EBB4AC21D22CD450019A3B6 /* Assets.xcassets */,
+				5EBB4AC41D22CD450019A3B6 /* LaunchScreen.storyboard */,
+				5EBB4AC71D22CD450019A3B6 /* Info.plist */,
+				5EA247481D27FB8000F5BE13 /* GoogleService-Info.plist */,
+				5EBB4AB61D22CD450019A3B6 /* Supporting Files */,
+			);
+			path = Bamboo;
+			sourceTree = "<group>";
+		};
+		5EBB4AB61D22CD450019A3B6 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5EBB4AB71D22CD450019A3B6 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5ED2B1901D266735000A8CD1 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				5EA2473B1D26D04B00F5BE13 /* BOMainTableViewCell.h */,
+				5EA2473A1D26D04B00F5BE13 /* BOMainTableViewCell.m */,
+				5EA247391D26D04B00F5BE13 /* BOMainTableViewCell.xib */,
+				5EEE588D1D2D31A50098E925 /* BOMainAdTableViewCell.h */,
+				5EEE588E1D2D31A50098E925 /* BOMainAdTableViewCell.m */,
+				5EEE588F1D2D31A50098E925 /* BOMainAdTableViewCell.xib */,
+			);
+			name = Cell;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5EBB4AB21D22CD450019A3B6 /* Bamboo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5EBB4ACA1D22CD450019A3B6 /* Build configuration list for PBXNativeTarget "Bamboo" */;
+			buildPhases = (
+				2EDA611241163B4F7F7EB73C /* [CP] Check Pods Manifest.lock */,
+				5EBB4AAF1D22CD450019A3B6 /* Sources */,
+				5EBB4AB01D22CD450019A3B6 /* Frameworks */,
+				5EBB4AB11D22CD450019A3B6 /* Resources */,
+				E661E1A24313FEFADF7A8C7F /* [CP] Embed Pods Frameworks */,
+				E1421AF6E63DE637CDF657DA /* [CP] Copy Pods Resources */,
+				5E8E05621D3C8C9800A930D4 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Bamboo;
+			productName = Bamboo;
+			productReference = 5EBB4AB31D22CD450019A3B6 /* Bamboo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5EBB4AAB1D22CD450019A3B6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = luna.gao;
+				TargetAttributes = {
+					5EBB4AB21D22CD450019A3B6 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = KFNX7T9G9N;
+						DevelopmentTeamName = "Xueqi Gao";
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 5EBB4AAE1D22CD450019A3B6 /* Build configuration list for PBXProject "Bamboo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5EBB4AAA1D22CD450019A3B6;
+			productRefGroup = 5EBB4AB41D22CD450019A3B6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5EBB4AB21D22CD450019A3B6 /* Bamboo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5EBB4AB11D22CD450019A3B6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5EA2473C1D26D04B00F5BE13 /* BOMainTableViewCell.xib in Resources */,
+				5EBB4AC61D22CD450019A3B6 /* LaunchScreen.storyboard in Resources */,
+				5EEE58911D2D31A50098E925 /* BOMainAdTableViewCell.xib in Resources */,
+				5EA247491D27FB8000F5BE13 /* GoogleService-Info.plist in Resources */,
+				5EBB4AC31D22CD450019A3B6 /* Assets.xcassets in Resources */,
+				5EBB4AC11D22CD450019A3B6 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2EDA611241163B4F7F7EB73C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		5E8E05621D3C8C9800A930D4 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "REV=`date +%y%m%d`\n\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion ${REV}\" \"${TARGET_BUILD_DIR}\"/${INFOPLIST_PATH}";
+		};
+		E1421AF6E63DE637CDF657DA /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Bamboo/Pods-Bamboo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E661E1A24313FEFADF7A8C7F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Bamboo/Pods-Bamboo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5EBB4AAF1D22CD450019A3B6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5EA2474C1D27FE2400F5BE13 /* BOPrivacyStatementViewController.m in Sources */,
+				5EA2473D1D26D04B00F5BE13 /* BOMainTableViewCell.m in Sources */,
+				5EA247581D2829FF00F5BE13 /* BOUpdatePasswordTableViewController.m in Sources */,
+				5EFBAC071D38E92100F96108 /* BOSelectBookTableViewController.m in Sources */,
+				5EA247471D26ECC400F5BE13 /* BOBambooDetailTableViewController.m in Sources */,
+				5EBB4ABB1D22CD450019A3B6 /* AppDelegate.m in Sources */,
+				5EA2475E1D290BBE00F5BE13 /* BOScanResultViewController.m in Sources */,
+				5EA247381D26CF9600F5BE13 /* BOLoginTableViewController.m in Sources */,
+				5EA247621D2954D400F5BE13 /* BookISBNResultViewController.m in Sources */,
+				5EA2475B1D28FBFB00F5BE13 /* BOPublishBambooTableViewController.m in Sources */,
+				5EBB4AB81D22CD450019A3B6 /* main.m in Sources */,
+				5EA2474F1D2802E900F5BE13 /* BOSignUpTableViewController.m in Sources */,
+				5EA247551D28188600F5BE13 /* BOModifyDisplayNameTableViewController.m in Sources */,
+				5EA247521D280AC700F5BE13 /* BOUserProfileTableViewController.m in Sources */,
+				5EEE58971D2E0C2C0098E925 /* BOBookListTableViewController.m in Sources */,
+				5EEE58891D2CF57D0098E925 /* BOUserTableViewController.m in Sources */,
+				5EEE58901D2D31A50098E925 /* BOMainAdTableViewCell.m in Sources */,
+				5EEE588C1D2D26950098E925 /* BOBookInfoViewController.m in Sources */,
+				5E6A3B431D2616D600971ACE /* BOMainTableViewController.m in Sources */,
+				5EB20B3F1D3C8BAF00E61BB3 /* BOAboutUsViewController.m in Sources */,
+				5EA247431D26DB5000F5BE13 /* BOFindMyPasswordTableViewController.m in Sources */,
+				5EEE58941D2E05D80098E925 /* BOMyBambooTableViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		5EBB4ABF1D22CD450019A3B6 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5EBB4AC01D22CD450019A3B6 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		5EBB4AC41D22CD450019A3B6 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5EBB4AC51D22CD450019A3B6 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5EBB4AC81D22CD450019A3B6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		5EBB4AC91D22CD450019A3B6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5EBB4ACB1D22CD450019A3B6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 93EF530832E216081726A041 /* Pods-Bamboo.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Bamboo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.luna.gao.Bamboo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		5EBB4ACC1D22CD450019A3B6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4C90FB75EEE10202ED69596E /* Pods-Bamboo.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Bamboo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.luna.gao.Bamboo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5EBB4AAE1D22CD450019A3B6 /* Build configuration list for PBXProject "Bamboo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5EBB4AC81D22CD450019A3B6 /* Debug */,
+				5EBB4AC91D22CD450019A3B6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5EBB4ACA1D22CD450019A3B6 /* Build configuration list for PBXNativeTarget "Bamboo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5EBB4ACB1D22CD450019A3B6 /* Debug */,
+				5EBB4ACC1D22CD450019A3B6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5EBB4AAB1D22CD450019A3B6 /* Project object */;
+}
