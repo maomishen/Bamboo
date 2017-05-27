@@ -11,6 +11,7 @@
 @interface BOScanResultViewController ()
 
 @property NSString *reslutString;
+@property LBXScanViewStyle *style;
 
 @end
 
@@ -21,12 +22,19 @@
     self.style = [self notSquare];
 }
 
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    [self drawScanView];
+    //不延时，可能会导致界面黑屏并卡住一会
+    [self performSelector:@selector(startScan) withObject:nil afterDelay:0.2];
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
-- (LBXScanViewStyle *)notSquare
+- (LBXScanViewStyle*)notSquare
 {
     //设置扫码区域参数
     LBXScanViewStyle *style = [[LBXScanViewStyle alloc]init];
@@ -38,14 +46,13 @@
     style.isNeedShowRetangle = NO;
     
     style.anmiationStyle = LBXScanViewAnimationStyle_LineStill;
-    
-    style.animationImage = [self createImageWithColor:[UIColor flatRedColor]];
+    style.animationImage = [self createImageWithColor:[UIColor redColor]];
     //非正方形
     //设置矩形宽高比
     style.whRatio = 4.3/2.18;
-    
     //离左边和右边距离
     style.xScanRetangleOffset = 30;
+    
     return style;
 }
 
@@ -67,6 +74,56 @@
     [self.view makeToast:str duration:2.0 position:CSToastPositionCenter];
 }
 
+- (void)drawScanView
+{
+    if (!_qRScanView)
+    {
+        CGRect rect = self.view.frame;
+        rect.origin = CGPointMake(0, 0);
+        
+        self.qRScanView = [[LBXScanView alloc]initWithFrame:rect style:_style];
+        
+        [self.view addSubview:_qRScanView];
+    }
+    [_qRScanView startDeviceReadyingWithText:@"相机启动中"];
+}
+
+//启动设备
+- (void)startScan
+{
+    if ( ![self cameraPemission] )
+    {
+        [_qRScanView stopDeviceReadying];
+        
+        [self showError:@"   请到设置隐私中开启本程序相机权限   "];
+        return;
+    }
+    
+    UIView *videoView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.view.frame), CGRectGetHeight(self.view.frame))];
+    videoView.backgroundColor = [UIColor clearColor];
+    [self.view insertSubview:videoView atIndex:0];
+    __weak __typeof(self) weakSelf = self;
+    
+    
+    if (!self.scanObj)
+    {
+        CGRect cropRect = CGRectZero;
+        cropRect = [LBXScanView getScanRectWithPreView:self.view style:_style];
+        
+        NSString *strCode = AVMetadataObjectTypeQRCode;
+        self.scanObj = [[LBXScanNative alloc]initWithPreView:videoView ObjectType:@[strCode] cropRect:cropRect success:^(NSArray<LBXScanResult *> *array) {
+            
+            [weakSelf scanResultWithArray:array];
+        }];
+        [self.scanObj setNeedCaptureImage:NO];
+    }
+    [self.scanObj startScan];
+    
+    [self.qRScanView stopDeviceReadying];
+    [self.qRScanView startScanAnimation];
+    
+    self.view.backgroundColor = [UIColor clearColor];
+}
 
 
 - (void)scanResultWithArray:(NSArray<LBXScanResult*>*)array
@@ -87,9 +144,7 @@
     
     LBXScanResult *scanResult = array[0];
     
-    NSString*strResult = scanResult.strScanned;
-    
-    self.scanImage = scanResult.imgScanned;
+    NSString* strResult = scanResult.strScanned;
     
     if (!strResult) {
         
@@ -97,12 +152,12 @@
         
         return;
     }
-    
-    //震动提醒
-    [LBXScanWrapper systemVibrate];
-    //声音提醒
-    [LBXScanWrapper systemSound];
-    
+//    
+//    //震动提醒
+//    [LBXScanWrapper systemVibrate];
+//    //声音提醒
+//    [LBXScanWrapper systemSound];
+//    
     [self showNextVCWithScanResult:scanResult];
     
 }
@@ -120,6 +175,32 @@
 {
     self.reslutString = strResult.strScanned;
     [self performSegueWithIdentifier:@"BookDetailPushSegue" sender:self];
+}
+
+- (BOOL)cameraPemission
+{
+    
+    BOOL isHavePemission = YES;
+    if ([AVCaptureDevice respondsToSelector:@selector(authorizationStatusForMediaType:)])
+    {
+        AVAuthorizationStatus permission =
+        [AVCaptureDevice authorizationStatusForMediaType:AVMediaTypeVideo];
+        
+        switch (permission) {
+            case AVAuthorizationStatusAuthorized:
+                isHavePemission = YES;
+                break;
+            case AVAuthorizationStatusDenied:
+            case AVAuthorizationStatusRestricted:
+                isHavePemission = NO;
+                break;
+            case AVAuthorizationStatusNotDetermined:
+                isHavePemission = YES;
+                break;
+        }
+    }
+    
+    return isHavePemission;
 }
 
 #pragma mark - Navigation

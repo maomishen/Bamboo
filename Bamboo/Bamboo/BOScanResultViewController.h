@@ -7,11 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "LBXScanViewController.h"
 #import "UIView+Toast.h"
+#import "LBXScanViewStyle.h"
 #import <ChameleonFramework/Chameleon.h>
 #import "BookISBNResultViewController.h"
+#import "LBXScanNative.h"
+#import "LBXScanView.h"
 
-@interface BOScanResultViewController : LBXScanViewController
+@interface BOScanResultViewController : UIViewController
+
+@property (nonatomic,strong) LBXScanView* qRScanView;
+
+@property (nonatomic,strong) LBXScanNative* scanObj;
 
 @end

@@ -16,5 +16,6 @@ target 'Bamboo' do
   pod 'ASProgressPopUpView'
   pod 'ChameleonFramework'
   pod 'SVProgressHUD'
-  pod 'LBXScan'
+  pod 'LBXScan/LBXNative'
+  pod 'LBXScan/UI'
 end
