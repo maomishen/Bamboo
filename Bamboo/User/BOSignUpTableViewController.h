@@ -7,8 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <AVOSCloud/AVOSCloud.h>
 #import "SVProgressHUD.h"
+@import FirebaseAuth;
 
 @interface BOSignUpTableViewController : UITableViewController
 

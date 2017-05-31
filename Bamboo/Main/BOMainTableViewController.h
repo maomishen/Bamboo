@@ -16,6 +16,7 @@
 #import "MJRefresh.h"
 #import "BOBambooDetailTableViewController.h"
 @import GoogleMobileAds;
+@import FirebaseAuth;
 
 @interface BOMainTableViewController : UITableViewController
 

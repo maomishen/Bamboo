@@ -18,4 +18,6 @@ target 'Bamboo' do
   pod 'SVProgressHUD'
   pod 'LBXScan/LBXNative'
   pod 'LBXScan/UI'
+  pod 'Firebase/Core'
+  pod 'Firebase/Auth'
 end

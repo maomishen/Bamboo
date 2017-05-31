@@ -7,9 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <AVOSCloud/AVOSCloud.h>
 #import <SDWebImage/UIImageView+WebCache.h>
 #import "BOBookListTableViewController.h"
+@import FirebaseAuth;
 
 @interface BOUserTableViewController : UITableViewController
 

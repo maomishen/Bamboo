@@ -59,19 +59,22 @@
     [SVProgressHUD showWithStatus:@"正在登录"];
     [SVProgressHUD setDefaultMaskType:SVProgressHUDMaskTypeGradient];
     
-    [AVUser logInWithUsernameInBackground:email password:password block:^(AVUser *user, NSError *error) {
-        [SVProgressHUD dismiss];
-        if (user != nil) {
-            [SVProgressHUD showSuccessWithStatus:@"登录成功"];
-            [SVProgressHUD setDefaultMaskType:SVProgressHUDMaskTypeNone];
-            [self.navigationController popViewControllerAnimated:YES];
-        } else {
-            UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"登录失败" message:[error localizedDescription] preferredStyle:UIAlertControllerStyleAlert];
-            UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"好的" style:UIAlertActionStyleDefault handler:nil];
-            [alertController addAction:okAction];
-            [self presentViewController:alertController animated:YES completion:nil];
-        }
-    }];
+    [[FIRAuth auth] signInWithEmail:email
+                           password:password
+                         completion:^(FIRUser *_Nullable user, NSError *_Nullable error) {
+                                 [SVProgressHUD dismiss];
+                                 if (user != nil) {
+                                     [SVProgressHUD showSuccessWithStatus:@"登录成功"];
+                                     [SVProgressHUD setDefaultMaskType:SVProgressHUDMaskTypeNone];
+                                     [self.navigationController popViewControllerAnimated:YES];
+                                 } else {
+                                     UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"登录失败" message:[error localizedDescription] preferredStyle:UIAlertControllerStyleAlert];
+                                     UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"好的" style:UIAlertActionStyleDefault handler:nil];
+                                     [alertController addAction:okAction];
+                                     [self presentViewController:alertController animated:YES completion:nil];
+                                 }
+                             }
+     ];
 }
 
 - (IBAction)signUpButtonClick:(id)sender {

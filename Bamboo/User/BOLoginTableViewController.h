@@ -7,9 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <AVOSCloud/AVOSCloud.h>
 #import "SVProgressHUD.h"
 #import <ChameleonFramework/Chameleon.h>
+@import FirebaseAuth;
 
 @interface BOLoginTableViewController : UITableViewController
 

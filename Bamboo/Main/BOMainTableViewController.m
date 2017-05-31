@@ -244,22 +244,25 @@
 #pragma mark - Navigation Item
 
 - (IBAction)navigationItemAddClick:(id)sender {
-    AVUser *currentUser = [AVUser currentUser];
-    if (currentUser != nil) {
-        [self performSegueWithIdentifier:@"PublishProgressPushSegue" sender:self];
-    } else {
-        //TODO: i18n
-        [self.view makeToast:@"需要先登录" duration:2.0 position:CSToastPositionCenter];
-    }
+    [[FIRAuth auth] addAuthStateDidChangeListener:^(FIRAuth *_Nonnull auth,
+                                                    FIRUser *_Nullable user) {
+        if (user != nil) {
+            [self performSegueWithIdentifier:@"PublishProgressPushSegue" sender:self];
+        } else {
+            [self.view makeToast:@"需要先登录" duration:2.0 position:CSToastPositionCenter];
+        }
+    }];
 }
 
 - (IBAction)navigationItemUserClick:(id)sender {
-    AVUser *currentUser = [AVUser currentUser];
-    if (currentUser != nil) {
-        [self performSegueWithIdentifier:@"UserPushSegue" sender:self];
-    } else {
-        [self performSegueWithIdentifier:@"LoginPushSegue" sender:self];
-    }
+    [[FIRAuth auth] addAuthStateDidChangeListener:^(FIRAuth *_Nonnull auth,
+                                                    FIRUser *_Nullable user) {
+        if (user != nil) {
+            [self performSegueWithIdentifier:@"UserPushSegue" sender:self];
+        } else {
+            [self performSegueWithIdentifier:@"LoginPushSegue" sender:self];
+        }
+    }];
 }
 
 #pragma mark - date

@@ -10,6 +10,8 @@
 
 @interface BOSignUpTableViewController () <UITextFieldDelegate>
 
+@property NSString *username;
+    
 @end
 
 @implementation BOSignUpTableViewController
@@ -42,20 +44,19 @@
 
 - (IBAction)signUpButtonClick:(id)sender {
     [self hideTheKeyboard];
-    AVUser *user = [AVUser user];// 新建 AVUser 对象实例
-    user.email = self.emailTextField.text;// 设置邮箱
-    if (user.email == nil || [user.email isEqualToString:@""]) {
+    
+    NSString *email = self.emailTextField.text;// 设置邮箱
+    if (email == nil || [email isEqualToString:@""]) {
         [self alertNilMessage:@"邮箱不可为空" withTextField:self.emailTextField];
         return;
     }
-    user.username = user.email;
-    user[@"displayName"] = self.displayNameTextField.text;// 设置用户名
-    if (user[@"displayName"] == nil || [user[@"displayName"] isEqualToString:@""]) {
+    self.username = self.displayNameTextField.text;// 设置用户名
+    if (self.username == nil || [self.username isEqualToString:@""]) {
         [self alertNilMessage:@"用户名不可为空" withTextField:self.displayNameTextField];
         return;
     }
-    user.password = self.passwordTextField.text;// 设置密码
-    if (user.password == nil || [user.password isEqualToString:@""]) {
+    NSString *password = self.passwordTextField.text;// 设置密码
+    if (password == nil || [password isEqualToString:@""]) {
         [self alertNilMessage:@"密码不可为空" withTextField:self.passwordTextField];
         return;
     }
@@ -70,18 +71,37 @@
     [SVProgressHUD showWithStatus:@"正在注册，请稍候"];
     [SVProgressHUD setDefaultMaskType:SVProgressHUDMaskTypeGradient];
     
-    [user signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+    [[FIRAuth auth] createUserWithEmail:email
+                               password:password
+                             completion:^(FIRUser *_Nullable user, NSError *_Nullable error) {
+                                 if (user != nil) {
+                                     [self upgradeUserName];
+                                 } else {
+                                     [SVProgressHUD dismiss];
+                                     // 失败的原因可能有多种，常见的是用户名已经存在。
+                                     UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"注册失败" message:[error localizedDescription] preferredStyle:UIAlertControllerStyleAlert];
+                                     UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"好的" style:UIAlertActionStyleDefault handler:nil];
+                                     [alertController addAction:okAction];
+                                     [self presentViewController:alertController animated:YES completion:nil];
+                                 }
+     }];
+}
+    
+- (void) upgradeUserName {
+    FIRUser *user = [FIRAuth auth].currentUser;
+    FIRUserProfileChangeRequest *changeRequest = [user profileChangeRequest];
+    
+    changeRequest.displayName = self.username;
+    [changeRequest commitChangesWithCompletion:^(NSError *_Nullable error) {
         [SVProgressHUD dismiss];
-        if (succeeded) {
-            [SVProgressHUD showSuccessWithStatus:@"注册成功"];
+        if (error) {
+            [SVProgressHUD showSuccessWithStatus:@"注册成功，但用户名注册失败，您可以在设置中重新设置"];
             [SVProgressHUD setDefaultMaskType:SVProgressHUDMaskTypeNone];
             [self performSegueWithIdentifier:@"unwindSegueFromSignUpToMain" sender:self];
         } else {
-            // 失败的原因可能有多种，常见的是用户名已经存在。
-            UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"注册失败" message:[error localizedDescription] preferredStyle:UIAlertControllerStyleAlert];
-            UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"好的" style:UIAlertActionStyleDefault handler:nil];
-            [alertController addAction:okAction];
-            [self presentViewController:alertController animated:YES completion:nil];
+            [SVProgressHUD showSuccessWithStatus:@"注册成功"];
+            [SVProgressHUD setDefaultMaskType:SVProgressHUDMaskTypeNone];
+            [self performSegueWithIdentifier:@"unwindSegueFromSignUpToMain" sender:self];
         }
     }];
 }

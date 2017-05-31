@@ -524,6 +524,7 @@
 			baseConfigurationReference = 93EF530832E216081726A041 /* Pods-Bamboo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = KFNX7T9G9N;
 				INFOPLIST_FILE = Bamboo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -537,6 +538,7 @@
 			baseConfigurationReference = 4C90FB75EEE10202ED69596E /* Pods-Bamboo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = KFNX7T9G9N;
 				INFOPLIST_FILE = Bamboo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

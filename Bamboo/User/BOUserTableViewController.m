@@ -16,17 +16,23 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [[FIRAuth auth] addAuthStateDidChangeListener:^(FIRAuth *_Nonnull auth,
+                                                    FIRUser *_Nullable user) {
+        if (user != nil) {
+            self.userNameLabel.text = user.displayName;
+            [self.userHeaderImageView sd_setImageWithURL:user.photoURL];
+            
+            self.doneNumberLabel.text = @"";
+            self.bambooNumberLabel.text = @"";
+            self.readingNumberLabel.text = @"";
+        } else {
+            // No user is signed in.
+        }
+    }];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    self.userNameLabel.text = [AVUser currentUser][@"displayName"];
-    [self.userHeaderImageView sd_setImageWithURL:[NSURL URLWithString:[AVUser currentUser][@"headerUrl"]]];
-    
-    self.doneNumberLabel.text = @"";
-    self.bambooNumberLabel.text = @"";
-    self.readingNumberLabel.text = @"";
-    
     [self.tableView deselectRowAtIndexPath:[self.tableView indexPathForSelectedRow] animated:YES];// 取消选中
 }
 

@@ -7,34 +7,34 @@
 	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
 	<string>ca-app-pub-3940256099942544/4411468910</string>
 	<key>CLIENT_ID</key>
-	<string>264028404830-at9s8liu9jmkfiiru7874pkvcvihnknd.apps.googleusercontent.com</string>
+	<string>1068392604280-crq0eqeq7s8cnsjvt3tb9uk7bg9e92ic.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.264028404830-at9s8liu9jmkfiiru7874pkvcvihnknd</string>
+	<string>com.googleusercontent.apps.1068392604280-crq0eqeq7s8cnsjvt3tb9uk7bg9e92ic</string>
 	<key>API_KEY</key>
-	<string>AIzaSyDsqeU_PYQ4tiJF8VrVhqMNXdD7qwmAJVo</string>
+	<string>AIzaSyA_M58m53OLZXR_mm5565YsHJX8uKXw5oc</string>
 	<key>GCM_SENDER_ID</key>
-	<string>264028404830</string>
+	<string>1068392604280</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
 	<string>com.luna.gao.Bamboo</string>
 	<key>PROJECT_ID</key>
-	<string>admob-app-id-8413197910</string>
+	<string>bamboo-cc70c</string>
 	<key>STORAGE_BUCKET</key>
-	<string>admob-app-id-8413197910.appspot.com</string>
+	<string>bamboo-cc70c.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<true/>
 	<key>IS_ANALYTICS_ENABLED</key>
 	<false/>
 	<key>IS_APPINVITE_ENABLED</key>
-	<false/>
+	<true/>
 	<key>IS_GCM_ENABLED</key>
 	<true/>
 	<key>IS_SIGNIN_ENABLED</key>
 	<true/>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:264028404830:ios:d60802d823f7f395</string>
+	<string>1:1068392604280:ios:d60802d823f7f395</string>
 	<key>DATABASE_URL</key>
-	<string>https://admob-app-id-8413197910.firebaseio.com</string>
+	<string>https://bamboo-cc70c.firebaseio.com</string>
 </dict>
 </plist>

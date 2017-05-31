@@ -7,10 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <AVOSCloud/AVOSCloud.h>
 #import "SVProgressHUD.h"
 #import "UIView+Toast.h"
 #import <SDWebImage/UIImageView+WebCache.h>
+@import FirebaseAuth;
 
 @interface BOUserProfileTableViewController : UITableViewController
 
