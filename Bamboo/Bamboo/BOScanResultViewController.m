@@ -110,7 +110,7 @@
         CGRect cropRect = CGRectZero;
         cropRect = [LBXScanView getScanRectWithPreView:self.view style:_style];
         
-        NSString *strCode = AVMetadataObjectTypeQRCode;
+        NSString *strCode = AVMetadataObjectTypeEAN13Code;
         self.scanObj = [[LBXScanNative alloc]initWithPreView:videoView ObjectType:@[strCode] cropRect:cropRect success:^(NSArray<LBXScanResult *> *array) {
             
             [weakSelf scanResultWithArray:array];
